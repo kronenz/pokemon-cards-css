@@ -1,0 +1,1936 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - banner [ref=e4]:
+        - navigation [ref=e5]:
+          - link "⚾ Baseball Cards" [ref=e7] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e8]: ⚾
+            - heading "Baseball Cards" [level=1] [ref=e9]
+          - button "메뉴 열기" [ref=e10] [cursor=pointer]
+          - generic [ref=e14]:
+            - button "테마 전환" [ref=e15] [cursor=pointer]: ☀️
+            - button "알림" [ref=e16] [cursor=pointer]:
+              - text: 🔔
+              - generic [ref=e17]: "3"
+            - generic [ref=e18]:
+              - img "Profile" [ref=e19]
+              - generic [ref=e20]: baseball_chulsoo
+      - main [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - generic [ref=e24]:
+              - heading "홀로그래픽 카드" [level=1] [ref=e25]
+              - paragraph [ref=e26]: 생동감 있고 화려한 야구 카드 컬렉션 플랫폼
+              - paragraph [ref=e27]: 홀로그래픽 효과 · KBO 10개 구단 · 프리미엄 카드 경험
+              - button "🎨 나만의 카드 만들기" [ref=e29] [cursor=pointer]
+            - generic [ref=e30]:
+              - button "오지환 카드 (클릭하여 뒤집기)" [ref=e34] [cursor=pointer]:
+                - generic [ref=e35]:
+                  - generic:
+                    - generic:
+                      - generic: LG
+                      - generic: "#6"
+                    - generic:
+                      - heading "오지환" [level=3]
+                      - paragraph: 내야수
+                      - generic: ★★★★★
+                - generic [ref=e39]:
+                  - img [ref=e41]:
+                    - generic [ref=e43]: KBO
+                  - generic [ref=e44]:
+                    - heading "LG TWINS" [level=2] [ref=e45]
+                    - paragraph [ref=e46]: LG 트윈스
+                  - img [ref=e52]
+                  - generic [ref=e58]:
+                    - generic [ref=e59]: 2024 SEASON
+                    - generic [ref=e60]: LIMITED EDITION
+              - button "구자욱 카드 (클릭하여 뒤집기)" [ref=e64] [cursor=pointer]:
+                - generic [ref=e65]:
+                  - generic:
+                    - generic:
+                      - generic: SAMSUNG
+                      - generic: "#5"
+                    - generic:
+                      - heading "구자욱" [level=3]
+                      - paragraph: 외야수
+                      - generic: ★★★★★
+                - generic [ref=e69]:
+                  - img [ref=e71]:
+                    - generic [ref=e73]: KBO
+                  - generic [ref=e74]:
+                    - heading "SAMSUNG LIONS" [level=2] [ref=e75]
+                    - paragraph [ref=e76]: 삼성 라이온즈
+                  - img [ref=e82]
+                  - generic [ref=e88]:
+                    - generic [ref=e89]: 2024 SEASON
+                    - generic [ref=e90]: LIMITED EDITION
+              - button "김도영 카드 (클릭하여 뒤집기)" [ref=e94] [cursor=pointer]:
+                - generic [ref=e95]:
+                  - generic:
+                    - generic:
+                      - generic: KIA
+                      - generic: "#5"
+                    - generic:
+                      - heading "김도영" [level=3]
+                      - paragraph: 내야수
+                      - generic: ★★★★★
+                - generic [ref=e99]:
+                  - img [ref=e101]:
+                    - generic [ref=e103]: KBO
+                  - generic [ref=e104]:
+                    - heading "KIA TIGERS" [level=2] [ref=e105]
+                    - paragraph [ref=e106]: KIA 타이거즈
+                  - img [ref=e112]
+                  - generic [ref=e118]:
+                    - generic [ref=e119]: 2024 SEASON
+                    - generic [ref=e120]: LIMITED EDITION
+          - generic [ref=e121]:
+            - generic [ref=e122]:
+              - generic [ref=e123]:
+                - heading "나의 컬렉션 대시보드" [level=2] [ref=e124]
+                - paragraph [ref=e125]: 최근 획득한 카드와 컬렉션 진행 상황을 확인하세요
+              - button "✨ 카드 자랑하기" [ref=e126] [cursor=pointer]
+            - generic [ref=e127]:
+              - generic [ref=e128]:
+                - generic [ref=e129]: 🎴
+                - generic [ref=e130]:
+                  - generic [ref=e131]: "147"
+                  - generic [ref=e132]: 총 보유 카드
+              - generic [ref=e133]:
+                - generic [ref=e134]: ⭐
+                - generic [ref=e135]:
+                  - generic [ref=e136]: "12"
+                  - generic [ref=e137]: 레전더리 카드
+              - generic [ref=e138]:
+                - generic [ref=e139]: 🏆
+                - generic [ref=e140]:
+                  - generic [ref=e141]: 5/8
+                  - generic [ref=e142]: 완성 컬렉션
+              - generic [ref=e143]:
+                - generic [ref=e144]: 🔥
+                - generic [ref=e145]:
+                  - generic [ref=e146]: 7일
+                  - generic [ref=e147]: 연속 수집
+          - generic [ref=e148]:
+            - generic [ref=e149]:
+              - heading "나의 컬렉션" [level=2] [ref=e150]
+              - paragraph [ref=e151]: 카드를 클릭하여 컬렉션을 펼쳐보세요
+            - generic [ref=e152]:
+              - generic [ref=e154]:
+                - generic [ref=e155]:
+                  - generic [ref=e156]:
+                    - heading "2024 레전드 컬렉션" [level=3] [ref=e157]
+                    - paragraph [ref=e158]: 역대 최고의 선수들을 한 자리에
+                    - generic [ref=e159]:
+                      - generic [ref=e160]:
+                        - generic [ref=e161]: 5/6
+                        - generic [ref=e162]: 카드
+                      - generic [ref=e163]:
+                        - generic [ref=e164]: 85%
+                        - generic [ref=e165]: 완성도
+                  - generic [ref=e166]:
+                    - img [ref=e167]
+                    - generic [ref=e170]: 85%
+                - button "컬렉션 펼치기" [ref=e171] [cursor=pointer]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "박찬호 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: LG
+                                - generic: "#61"
+                              - generic:
+                                - heading "박찬호" [level=3]
+                                - paragraph: 투수
+                                - generic: ★★★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "LG TWINS" [level=2]
+                                - paragraph: LG 트윈스
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "이승엽 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: SAMSUNG
+                                - generic: "#10"
+                              - generic:
+                                - heading "이승엽" [level=3]
+                                - paragraph: 내야수
+                                - generic: ★★★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "SAMSUNG LIONS" [level=2]
+                                - paragraph: 삼성 라이온즈
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "김병현 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: LG
+                                - generic: "#51"
+                              - generic:
+                                - heading "김병현" [level=3]
+                                - paragraph: 투수
+                                - generic: ★★★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "LG TWINS" [level=2]
+                                - paragraph: LG 트윈스
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "선동열 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: LOTTE
+                                - generic: "#21"
+                              - generic:
+                                - heading "선동열" [level=3]
+                                - paragraph: 투수
+                                - generic: ★★★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "LOTTE GIANTS" [level=2]
+                                - paragraph: 롯데 자이언츠
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "최동원 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: LOTTE
+                                - generic: "#11"
+                              - generic:
+                                - heading "최동원" [level=3]
+                                - paragraph: 투수
+                                - generic: ★★★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "LOTTE GIANTS" [level=2]
+                                - paragraph: 롯데 자이언츠
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "장성호 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: DOOSAN
+                                - generic: "#22"
+                              - generic:
+                                - heading "장성호" [level=3]
+                                - paragraph: 포수
+                                - generic: ★★★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "DOOSAN BEARS" [level=2]
+                                - paragraph: 두산 베어스
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - img
+                      - generic: 컬렉션 보기
+              - generic [ref=e173]:
+                - generic [ref=e174]:
+                  - generic [ref=e175]:
+                    - heading "2024 신인왕 후보" [level=3] [ref=e176]
+                    - paragraph [ref=e177]: 미래를 이끌 새로운 스타들
+                    - generic [ref=e178]:
+                      - generic [ref=e179]:
+                        - generic [ref=e180]: 3/5
+                        - generic [ref=e181]: 카드
+                      - generic [ref=e182]:
+                        - generic [ref=e183]: 60%
+                        - generic [ref=e184]: 완성도
+                  - generic [ref=e185]:
+                    - img [ref=e186]
+                    - generic [ref=e189]: 60%
+                - button "컬렉션 펼치기" [ref=e190] [cursor=pointer]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "김영웅 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: DOOSAN
+                                - generic: "#19"
+                              - generic:
+                                - heading "김영웅" [level=3]
+                                - paragraph: 투수
+                                - generic: ★★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "DOOSAN BEARS" [level=2]
+                                - paragraph: 두산 베어스
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "문보경 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: HANWHA
+                                - generic: "#33"
+                              - generic:
+                                - heading "문보경" [level=3]
+                                - paragraph: 외야수
+                                - generic: ★★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "HANWHA EAGLES" [level=2]
+                                - paragraph: 한화 이글스
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "유영찬 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: KIA
+                                - generic: "#44"
+                              - generic:
+                                - heading "유영찬" [level=3]
+                                - paragraph: 내야수
+                                - generic: ★★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "KIA TIGERS" [level=2]
+                                - paragraph: KIA 타이거즈
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "윤동희 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: KT
+                                - generic: "#38"
+                              - generic:
+                                - heading "윤동희" [level=3]
+                                - paragraph: 투수
+                                - generic: ★★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "KT WIZ" [level=2]
+                                - paragraph: KT 위즈
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "김건희 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: SSG
+                                - generic: "#9"
+                              - generic:
+                                - heading "김건희" [level=3]
+                                - paragraph: 내야수
+                                - generic: ★★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "SSG LANDERS" [level=2]
+                                - paragraph: SSG 랜더스
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - img
+                      - generic: 컬렉션 보기
+              - generic [ref=e192]:
+                - generic [ref=e193]:
+                  - generic [ref=e194]:
+                    - heading "KBO 올스타 2024" [level=3] [ref=e195]
+                    - paragraph [ref=e196]: 팬들이 선택한 최고의 선수들
+                    - generic [ref=e197]:
+                      - generic [ref=e198]:
+                        - generic [ref=e199]: 4/6
+                        - generic [ref=e200]: 카드
+                      - generic [ref=e201]:
+                        - generic [ref=e202]: 70%
+                        - generic [ref=e203]: 완성도
+                  - generic [ref=e204]:
+                    - img [ref=e205]
+                    - generic [ref=e208]: 70%
+                - button "컬렉션 펼치기" [ref=e209] [cursor=pointer]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "양현종 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: KIA
+                                - generic: "#54"
+                              - generic:
+                                - heading "양현종" [level=3]
+                                - paragraph: 투수
+                                - generic: ★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "KIA TIGERS" [level=2]
+                                - paragraph: KIA 타이거즈
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "김태균 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: HANWHA
+                                - generic: "#32"
+                              - generic:
+                                - heading "김태균" [level=3]
+                                - paragraph: 내야수
+                                - generic: ★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "HANWHA EAGLES" [level=2]
+                                - paragraph: 한화 이글스
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "박병호 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: KT
+                                - generic: "#52"
+                              - generic:
+                                - heading "박병호" [level=3]
+                                - paragraph: 내야수
+                                - generic: ★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "KT WIZ" [level=2]
+                                - paragraph: KT 위즈
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "김재환 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: DOOSAN
+                                - generic: "#27"
+                              - generic:
+                                - heading "김재환" [level=3]
+                                - paragraph: 내야수
+                                - generic: ★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "DOOSAN BEARS" [level=2]
+                                - paragraph: 두산 베어스
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "나성범 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: NC
+                                - generic: "#17"
+                              - generic:
+                                - heading "나성범" [level=3]
+                                - paragraph: 외야수
+                                - generic: ★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "NC DINOS" [level=2]
+                                - paragraph: NC 다이노스
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - generic:
+                        - button "최정 카드 (클릭하여 뒤집기)":
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: SSG
+                                - generic: "#14"
+                              - generic:
+                                - heading "최정" [level=3]
+                                - paragraph: 내야수
+                                - generic: ★★★
+                          - generic:
+                            - generic:
+                              - generic:
+                                - img:
+                                  - generic: KBO
+                              - generic:
+                                - heading "SSG LANDERS" [level=2]
+                                - paragraph: SSG 랜더스
+                              - generic:
+                                - img
+                              - generic:
+                                - generic: 2024 SEASON
+                                - generic: LIMITED EDITION
+                  - generic:
+                    - generic:
+                      - img
+                      - generic: 컬렉션 보기
+          - generic [ref=e210]:
+            - generic [ref=e211]:
+              - heading "커뮤니티 갤러리" [level=2] [ref=e212]
+              - paragraph [ref=e213]: Civitai 스타일 마소네리 그리드로 최고의 카드들을 발견하세요
+            - generic [ref=e215]:
+              - generic [ref=e216]:
+                - generic [ref=e217]:
+                  - button "🔥 Trending" [ref=e218] [cursor=pointer]
+                  - button "⚡ Latest" [ref=e219] [cursor=pointer]
+                  - button "⭐ Popular" [ref=e220] [cursor=pointer]
+                  - button "👥 Following" [ref=e221] [cursor=pointer]
+                - searchbox "Search cards, creators, tags..." [ref=e223]
+              - generic [ref=e225]:
+                - generic [ref=e227]:
+                  - 'button "포토카드 #1 홀로그래픽 카드" [ref=e229]':
+                    - generic:
+                      - generic:
+                        - generic: LG
+                        - generic: ★
+                      - generic:
+                        - 'heading "포토카드 #1" [level=3]'
+                        - paragraph: LG 선수
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 1
+                          - paragraph: "포토카드 #1"
+                      - generic:
+                        - button "🤍 266"
+                        - generic: 💬 25
+                        - generic: ⬇️ 399
+                        - generic: ⭐ 4.7
+                      - generic:
+                        - generic: LG
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e231]:
+                  - 'button "포토카드 #2 홀로그래픽 카드" [ref=e233]':
+                    - generic:
+                      - generic:
+                        - generic: DOOSAN
+                        - generic: ★★
+                      - generic:
+                        - 'heading "포토카드 #2" [level=3]'
+                        - paragraph: DOOSAN 팀
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 2
+                          - paragraph: "포토카드 #2"
+                      - generic:
+                        - button "🤍 407"
+                        - generic: 💬 19
+                        - generic: ⬇️ 201
+                        - generic: ⭐ 4.2
+                      - generic:
+                        - generic: DOOSAN
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e235]:
+                  - 'button "포토카드 #3 홀로그래픽 카드" [ref=e237]':
+                    - generic:
+                      - generic:
+                        - generic: KT
+                        - generic: ★★★
+                      - generic:
+                        - 'heading "포토카드 #3" [level=3]'
+                        - paragraph: KT 코치
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 3
+                          - paragraph: "포토카드 #3"
+                      - generic:
+                        - button "🤍 18"
+                        - generic: 💬 81
+                        - generic: ⬇️ 166
+                        - generic: ⭐ 3.6
+                      - generic:
+                        - generic: KT
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e239]:
+                  - 'button "포토카드 #4 홀로그래픽 카드" [ref=e241]':
+                    - generic:
+                      - generic:
+                        - generic: SAMSUNG
+                        - generic: ★★★★
+                      - generic:
+                        - 'heading "포토카드 #4" [level=3]'
+                        - paragraph: SAMSUNG 선수
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 4
+                          - paragraph: "포토카드 #4"
+                      - generic:
+                        - button "🤍 295"
+                        - generic: 💬 59
+                        - generic: ⬇️ 280
+                        - generic: ⭐ 4.2
+                      - generic:
+                        - generic: SAMSUNG
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e243]:
+                  - 'button "포토카드 #5 홀로그래픽 카드" [ref=e245]':
+                    - generic:
+                      - generic:
+                        - generic: NC
+                        - generic: ★★★★★
+                      - generic:
+                        - 'heading "포토카드 #5" [level=3]'
+                        - paragraph: NC 팀
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 5
+                          - paragraph: "포토카드 #5"
+                      - generic:
+                        - button "🤍 600"
+                        - generic: 💬 46
+                        - generic: ⬇️ 74
+                        - generic: ⭐ 4.8
+                      - generic:
+                        - generic: NC
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e247]:
+                  - 'button "포토카드 #6 홀로그래픽 카드" [ref=e249]':
+                    - generic:
+                      - generic:
+                        - generic: KIA
+                        - generic: ★
+                      - generic:
+                        - 'heading "포토카드 #6" [level=3]'
+                        - paragraph: KIA 코치
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 6
+                          - paragraph: "포토카드 #6"
+                      - generic:
+                        - button "🤍 283"
+                        - generic: 💬 39
+                        - generic: ⬇️ 161
+                        - generic: ⭐ 4.2
+                      - generic:
+                        - generic: KIA
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e251]:
+                  - 'button "포토카드 #7 홀로그래픽 카드" [ref=e253]':
+                    - generic:
+                      - generic:
+                        - generic: LOTTE
+                        - generic: ★★
+                      - generic:
+                        - 'heading "포토카드 #7" [level=3]'
+                        - paragraph: LOTTE 선수
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 7
+                          - paragraph: "포토카드 #7"
+                      - generic:
+                        - button "🤍 821"
+                        - generic: 💬 87
+                        - generic: ⬇️ 101
+                        - generic: ⭐ 3.2
+                      - generic:
+                        - generic: LOTTE
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e255]:
+                  - 'button "포토카드 #8 홀로그래픽 카드" [ref=e257]':
+                    - generic:
+                      - generic:
+                        - generic: SSG
+                        - generic: ★★★
+                      - generic:
+                        - 'heading "포토카드 #8" [level=3]'
+                        - paragraph: SSG 팀
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 8
+                          - paragraph: "포토카드 #8"
+                      - generic:
+                        - button "🤍 342"
+                        - generic: 💬 21
+                        - generic: ⬇️ 110
+                        - generic: ⭐ 4.1
+                      - generic:
+                        - generic: SSG
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e259]:
+                  - 'button "포토카드 #9 홀로그래픽 카드" [ref=e261]':
+                    - generic:
+                      - generic:
+                        - generic: HANWHA
+                        - generic: ★★★★
+                      - generic:
+                        - 'heading "포토카드 #9" [level=3]'
+                        - paragraph: HANWHA 코치
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 9
+                          - paragraph: "포토카드 #9"
+                      - generic:
+                        - button "🤍 931"
+                        - generic: 💬 74
+                        - generic: ⬇️ 145
+                        - generic: ⭐ 3.4
+                      - generic:
+                        - generic: HANWHA
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e263]:
+                  - 'button "포토카드 #10 홀로그래픽 카드" [ref=e265]':
+                    - generic:
+                      - generic:
+                        - generic: KIWOOM
+                        - generic: ★★★★★
+                      - generic:
+                        - 'heading "포토카드 #10" [level=3]'
+                        - paragraph: KIWOOM 선수
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 10
+                          - paragraph: "포토카드 #10"
+                      - generic:
+                        - button "🤍 995"
+                        - generic: 💬 0
+                        - generic: ⬇️ 42
+                        - generic: ⭐ 4.6
+                      - generic:
+                        - generic: KIWOOM
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e267]:
+                  - 'button "포토카드 #11 홀로그래픽 카드" [ref=e269]':
+                    - generic:
+                      - generic:
+                        - generic: LG
+                        - generic: ★
+                      - generic:
+                        - 'heading "포토카드 #11" [level=3]'
+                        - paragraph: LG 팀
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 11
+                          - paragraph: "포토카드 #11"
+                      - generic:
+                        - button "🤍 666"
+                        - generic: 💬 8
+                        - generic: ⬇️ 314
+                        - generic: ⭐ 4.2
+                      - generic:
+                        - generic: LG
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e271]:
+                  - 'button "포토카드 #12 홀로그래픽 카드" [ref=e273]':
+                    - generic:
+                      - generic:
+                        - generic: DOOSAN
+                        - generic: ★★
+                      - generic:
+                        - 'heading "포토카드 #12" [level=3]'
+                        - paragraph: DOOSAN 코치
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 12
+                          - paragraph: "포토카드 #12"
+                      - generic:
+                        - button "🤍 589"
+                        - generic: 💬 29
+                        - generic: ⬇️ 46
+                        - generic: ⭐ 4.2
+                      - generic:
+                        - generic: DOOSAN
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e275]:
+                  - 'button "포토카드 #13 홀로그래픽 카드" [ref=e277]':
+                    - generic:
+                      - generic:
+                        - generic: KT
+                        - generic: ★★★
+                      - generic:
+                        - 'heading "포토카드 #13" [level=3]'
+                        - paragraph: KT 선수
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 13
+                          - paragraph: "포토카드 #13"
+                      - generic:
+                        - button "🤍 377"
+                        - generic: 💬 57
+                        - generic: ⬇️ 174
+                        - generic: ⭐ 4.5
+                      - generic:
+                        - generic: KT
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e279]:
+                  - 'button "포토카드 #14 홀로그래픽 카드" [ref=e281]':
+                    - generic:
+                      - generic:
+                        - generic: SAMSUNG
+                        - generic: ★★★★
+                      - generic:
+                        - 'heading "포토카드 #14" [level=3]'
+                        - paragraph: SAMSUNG 팀
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 14
+                          - paragraph: "포토카드 #14"
+                      - generic:
+                        - button "🤍 307"
+                        - generic: 💬 56
+                        - generic: ⬇️ 369
+                        - generic: ⭐ 3.4
+                      - generic:
+                        - generic: SAMSUNG
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e283]:
+                  - 'button "포토카드 #15 홀로그래픽 카드" [ref=e285]':
+                    - generic:
+                      - generic:
+                        - generic: NC
+                        - generic: ★★★★★
+                      - generic:
+                        - 'heading "포토카드 #15" [level=3]'
+                        - paragraph: NC 코치
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 15
+                          - paragraph: "포토카드 #15"
+                      - generic:
+                        - button "🤍 825"
+                        - generic: 💬 64
+                        - generic: ⬇️ 55
+                        - generic: ⭐ 4.1
+                      - generic:
+                        - generic: NC
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e287]:
+                  - 'button "포토카드 #16 홀로그래픽 카드" [ref=e289]':
+                    - generic:
+                      - generic:
+                        - generic: KIA
+                        - generic: ★
+                      - generic:
+                        - 'heading "포토카드 #16" [level=3]'
+                        - paragraph: KIA 선수
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 16
+                          - paragraph: "포토카드 #16"
+                      - generic:
+                        - button "🤍 942"
+                        - generic: 💬 85
+                        - generic: ⬇️ 339
+                        - generic: ⭐ 4.2
+                      - generic:
+                        - generic: KIA
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e291]:
+                  - 'button "포토카드 #17 홀로그래픽 카드" [ref=e293]':
+                    - generic:
+                      - generic:
+                        - generic: LOTTE
+                        - generic: ★★
+                      - generic:
+                        - 'heading "포토카드 #17" [level=3]'
+                        - paragraph: LOTTE 팀
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 17
+                          - paragraph: "포토카드 #17"
+                      - generic:
+                        - button "🤍 679"
+                        - generic: 💬 65
+                        - generic: ⬇️ 435
+                        - generic: ⭐ 3.6
+                      - generic:
+                        - generic: LOTTE
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e295]:
+                  - 'button "포토카드 #18 홀로그래픽 카드" [ref=e297]':
+                    - generic:
+                      - generic:
+                        - generic: SSG
+                        - generic: ★★★
+                      - generic:
+                        - 'heading "포토카드 #18" [level=3]'
+                        - paragraph: SSG 코치
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 18
+                          - paragraph: "포토카드 #18"
+                      - generic:
+                        - button "🤍 454"
+                        - generic: 💬 32
+                        - generic: ⬇️ 413
+                        - generic: ⭐ 4.1
+                      - generic:
+                        - generic: SSG
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e299]:
+                  - 'button "포토카드 #19 홀로그래픽 카드" [ref=e301]':
+                    - generic:
+                      - generic:
+                        - generic: HANWHA
+                        - generic: ★★★★
+                      - generic:
+                        - 'heading "포토카드 #19" [level=3]'
+                        - paragraph: HANWHA 선수
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 19
+                          - paragraph: "포토카드 #19"
+                      - generic:
+                        - button "🤍 345"
+                        - generic: 💬 49
+                        - generic: ⬇️ 330
+                        - generic: ⭐ 4.6
+                      - generic:
+                        - generic: HANWHA
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+                - generic [ref=e303]:
+                  - 'button "포토카드 #20 홀로그래픽 카드" [ref=e305]':
+                    - generic:
+                      - generic:
+                        - generic: KIWOOM
+                        - generic: ★★★★★
+                      - generic:
+                        - 'heading "포토카드 #20" [level=3]'
+                        - paragraph: KIWOOM 팀
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 크
+                        - generic:
+                          - paragraph: 크리에이터 20
+                          - paragraph: "포토카드 #20"
+                      - generic:
+                        - button "🤍 574"
+                        - generic: 💬 95
+                        - generic: ⬇️ 104
+                        - generic: ⭐ 4.3
+                      - generic:
+                        - generic: KIWOOM
+                        - generic: 2024 시즌
+                        - generic: 추억의 순간
+                      - generic:
+                        - button "Bookmark": 📑
+                        - button "Share": 🔗
+                        - button "More": ⋯
+          - generic [ref=e306]:
+            - generic [ref=e307]:
+              - heading "AI 추천" [level=2] [ref=e308]
+              - paragraph [ref=e309]: 당신의 취향과 컬렉션을 분석한 맞춤 추천
+            - generic [ref=e311]:
+              - generic [ref=e313]:
+                - heading "✨ 당신을 위한 추천" [level=2] [ref=e314]:
+                  - generic [ref=e315]: ✨
+                  - text: 당신을 위한 추천
+                - paragraph [ref=e316]: 취향과 컬렉션 진행도를 분석한 개인화 추천
+              - generic [ref=e317]:
+                - button "🎯 전체 추천" [ref=e318] [cursor=pointer]
+                - button "📦 컬렉션 완성" [ref=e319] [cursor=pointer]
+                - button "⚾ 내 팀 기반" [ref=e320] [cursor=pointer]
+                - button "🔥 트렌딩" [ref=e321] [cursor=pointer]
+                - button "🆕 신규 출시" [ref=e322] [cursor=pointer]
+              - generic [ref=e323]:
+                - generic [ref=e324]:
+                  - generic [ref=e325]:
+                    - generic [ref=e326]: 95% 매치
+                    - generic [ref=e327]: 컬렉션 완성
+                  - button "오지환 홀로그래픽 카드" [ref=e330]:
+                    - generic:
+                      - generic:
+                        - generic: lg
+                        - generic: legendary
+                      - generic:
+                        - heading "오지환" [level=3]
+                        - paragraph: LG 트윈스 내야수
+                  - generic [ref=e331]:
+                    - heading "오지환" [level=4] [ref=e332]
+                    - paragraph [ref=e333]: LG 트윈스 내야수
+                    - generic [ref=e334]:
+                      - generic [ref=e335]: 💡
+                      - generic [ref=e336]: 컬렉션 완성까지 레전더리 카드 3장 필요
+                    - generic [ref=e337]:
+                      - button "⭐ 획득하기" [ref=e338] [cursor=pointer]
+                      - button "🔍 상세보기" [ref=e339] [cursor=pointer]
+                - generic [ref=e340]:
+                  - generic [ref=e341]:
+                    - generic [ref=e342]: 90% 매치
+                    - generic [ref=e343]: 내 팀
+                  - button "LG 스페셜 카드 홀로그래픽 카드" [ref=e346]:
+                    - generic:
+                      - generic:
+                        - generic: lg
+                        - generic: epic
+                      - generic:
+                        - heading "LG 스페셜 카드" [level=3]
+                        - paragraph: 2024 시즌 하이라이트
+                  - generic [ref=e347]:
+                    - heading "LG 스페셜 카드" [level=4] [ref=e348]
+                    - paragraph [ref=e349]: 2024 시즌 하이라이트
+                    - generic [ref=e350]:
+                      - generic [ref=e351]: 💡
+                      - generic [ref=e352]: LG 팬을 위한 추천
+                    - generic [ref=e353]:
+                      - button "⭐ 획득하기" [ref=e354] [cursor=pointer]
+                      - button "🔍 상세보기" [ref=e355] [cursor=pointer]
+                - generic [ref=e356]:
+                  - generic [ref=e357]:
+                    - generic [ref=e358]: 85% 매치
+                    - generic [ref=e359]: 내 팀
+                  - button "KIA 스페셜 카드 홀로그래픽 카드" [ref=e362]:
+                    - generic:
+                      - generic:
+                        - generic: kia
+                        - generic: rare
+                      - generic:
+                        - heading "KIA 스페셜 카드" [level=3]
+                        - paragraph: 2024 시즌 하이라이트
+                  - generic [ref=e363]:
+                    - heading "KIA 스페셜 카드" [level=4] [ref=e364]
+                    - paragraph [ref=e365]: 2024 시즌 하이라이트
+                    - generic [ref=e366]:
+                      - generic [ref=e367]: 💡
+                      - generic [ref=e368]: KIA 팬을 위한 추천
+                    - generic [ref=e369]:
+                      - button "⭐ 획득하기" [ref=e370] [cursor=pointer]
+                      - button "🔍 상세보기" [ref=e371] [cursor=pointer]
+                - generic [ref=e372]:
+                  - generic [ref=e373]:
+                    - generic [ref=e374]: 85% 매치
+                    - generic [ref=e375]: 트렌딩
+                  - 'button "트렌딩 카드 #1 홀로그래픽 카드" [ref=e378]':
+                    - generic:
+                      - generic:
+                        - generic: lg
+                        - generic: common
+                      - generic:
+                        - 'heading "트렌딩 카드 #1" [level=3]'
+                        - paragraph: 지금 인기 상승중
+                  - generic [ref=e379]:
+                    - 'heading "트렌딩 카드 #1" [level=4] [ref=e380]'
+                    - paragraph [ref=e381]: 지금 인기 상승중
+                    - generic [ref=e382]:
+                      - generic [ref=e383]: 💡
+                      - generic [ref=e384]: 최근 7일간 조회수 300% 증가
+                    - generic [ref=e385]:
+                      - button "⭐ 획득하기" [ref=e386] [cursor=pointer]
+                      - button "🔍 상세보기" [ref=e387] [cursor=pointer]
+                - generic [ref=e388]:
+                  - generic [ref=e389]:
+                    - generic [ref=e390]: 80% 매치
+                    - generic [ref=e391]: 트렌딩
+                  - 'button "트렌딩 카드 #2 홀로그래픽 카드" [ref=e394]':
+                    - generic:
+                      - generic:
+                        - generic: doosan
+                        - generic: rare
+                      - generic:
+                        - 'heading "트렌딩 카드 #2" [level=3]'
+                        - paragraph: 지금 인기 상승중
+                  - generic [ref=e395]:
+                    - 'heading "트렌딩 카드 #2" [level=4] [ref=e396]'
+                    - paragraph [ref=e397]: 지금 인기 상승중
+                    - generic [ref=e398]:
+                      - generic [ref=e399]: 💡
+                      - generic [ref=e400]: 최근 7일간 조회수 300% 증가
+                    - generic [ref=e401]:
+                      - button "⭐ 획득하기" [ref=e402] [cursor=pointer]
+                      - button "🔍 상세보기" [ref=e403] [cursor=pointer]
+                - generic [ref=e404]:
+                  - generic [ref=e405]:
+                    - generic [ref=e406]: 80% 매치
+                    - generic [ref=e407]: NEW
+                  - 'button "신규 카드 #1 홀로그래픽 카드" [ref=e410]':
+                    - generic:
+                      - generic:
+                        - generic: lg
+                        - generic: legendary
+                      - generic:
+                        - 'heading "신규 카드 #1" [level=3]'
+                        - paragraph: 방금 출시됨
+                  - generic [ref=e411]:
+                    - 'heading "신규 카드 #1" [level=4] [ref=e412]'
+                    - paragraph [ref=e413]: 방금 출시됨
+                    - generic [ref=e414]:
+                      - generic [ref=e415]: 💡
+                      - generic [ref=e416]: 24시간 이내 출시
+                    - generic [ref=e417]:
+                      - button "⭐ 획득하기" [ref=e418] [cursor=pointer]
+                      - button "🔍 상세보기" [ref=e419] [cursor=pointer]
+                - generic [ref=e420]:
+                  - generic [ref=e421]:
+                    - generic [ref=e422]: 80% 매치
+                    - generic [ref=e423]: NEW
+                  - 'button "신규 카드 #2 홀로그래픽 카드" [ref=e426]':
+                    - generic:
+                      - generic:
+                        - generic: doosan
+                        - generic: epic
+                      - generic:
+                        - 'heading "신규 카드 #2" [level=3]'
+                        - paragraph: 방금 출시됨
+                  - generic [ref=e427]:
+                    - 'heading "신규 카드 #2" [level=4] [ref=e428]'
+                    - paragraph [ref=e429]: 방금 출시됨
+                    - generic [ref=e430]:
+                      - generic [ref=e431]: 💡
+                      - generic [ref=e432]: 24시간 이내 출시
+                    - generic [ref=e433]:
+                      - button "⭐ 획득하기" [ref=e434] [cursor=pointer]
+                      - button "🔍 상세보기" [ref=e435] [cursor=pointer]
+                - generic [ref=e436]:
+                  - generic [ref=e437]:
+                    - generic [ref=e438]: 75% 매치
+                    - generic [ref=e439]: 트렌딩
+                  - 'button "트렌딩 카드 #3 홀로그래픽 카드" [ref=e442]':
+                    - generic:
+                      - generic:
+                        - generic: kt
+                        - generic: epic
+                      - generic:
+                        - 'heading "트렌딩 카드 #3" [level=3]'
+                        - paragraph: 지금 인기 상승중
+                  - generic [ref=e443]:
+                    - 'heading "트렌딩 카드 #3" [level=4] [ref=e444]'
+                    - paragraph [ref=e445]: 지금 인기 상승중
+                    - generic [ref=e446]:
+                      - generic [ref=e447]: 💡
+                      - generic [ref=e448]: 최근 7일간 조회수 300% 증가
+                    - generic [ref=e449]:
+                      - button "⭐ 획득하기" [ref=e450] [cursor=pointer]
+                      - button "🔍 상세보기" [ref=e451] [cursor=pointer]
+          - generic [ref=e452]:
+            - generic [ref=e453]:
+              - heading "실시간 활동" [level=2] [ref=e454]
+              - paragraph [ref=e455]: 지금 이 순간 일어나는 일들
+            - generic [ref=e456]:
+              - generic [ref=e457]:
+                - generic [ref=e458]: ✨
+                - generic [ref=e459]:
+                  - strong [ref=e460]: 야구매니아
+                  - text: 님이 레전더리 카드를 획득했습니다
+                - generic [ref=e461]: 방금 전
+              - generic [ref=e462]:
+                - generic [ref=e463]: 🏆
+                - generic [ref=e464]:
+                  - strong [ref=e465]: KBO러버
+                  - text: 님이 "2024 올스타" 컬렉션을 완성했습니다
+                - generic [ref=e466]: 2분 전
+              - generic [ref=e467]:
+                - generic [ref=e468]: 🔥
+                - generic [ref=e469]:
+                  - strong [ref=e470]: 베어스팬
+                  - text: 님의 카드가 인기 급상승 중입니다
+                - generic [ref=e471]: 5분 전
+              - generic [ref=e472]:
+                - generic [ref=e473]: 💝
+                - generic [ref=e474]:
+                  - strong [ref=e475]: 히어로즈
+                  - text: 님이 새로운 카드를 자랑했습니다
+                - generic [ref=e476]: 8분 전
+          - generic [ref=e477]:
+            - generic [ref=e478]:
+              - heading "KBO 구단 & 오늘의 경기" [level=2] [ref=e479]
+              - paragraph [ref=e480]: 실시간 경기 정보와 구단 테마를 확인하세요
+            - generic [ref=e482]:
+              - generic [ref=e485]:
+                - generic [ref=e486]: 🏆
+                - heading "2024 한국시리즈" [level=3] [ref=e487]
+                - paragraph [ref=e488]: KIA vs SSG - 역대급 대결
+                - paragraph [ref=e489]: 2024.11.02 - 11.10
+              - generic [ref=e490]:
+                - heading "⚾ 오늘의 경기" [level=3] [ref=e491]:
+                  - generic [ref=e492]: ⚾
+                  - text: 오늘의 경기
+                - generic [ref=e493]:
+                  - generic [ref=e494]:
+                    - generic [ref=e495]: 18:30
+                    - generic [ref=e496]:
+                      - generic [ref=e499]: 두산
+                      - generic [ref=e500]: VS
+                      - generic [ref=e503]: LG
+                    - generic [ref=e504]: 📍 잠실야구장
+                  - generic [ref=e505]:
+                    - generic [ref=e506]:
+                      - text: 진행중
+                      - generic [ref=e508]: 6회말
+                    - generic [ref=e509]:
+                      - generic [ref=e510]:
+                        - generic [ref=e512]: 삼성
+                        - generic [ref=e513]: "2"
+                      - generic [ref=e514]: VS
+                      - generic [ref=e515]:
+                        - generic [ref=e516]: "4"
+                        - generic [ref=e518]: KIA
+                    - generic [ref=e519]: 📍 광주-기아 챔피언스 필드
+                  - generic [ref=e520]:
+                    - generic [ref=e521]: 경기종료
+                    - generic [ref=e522]:
+                      - generic [ref=e523]:
+                        - generic [ref=e525]: 한화
+                        - generic [ref=e526]: "5"
+                      - generic [ref=e527]: VS
+                      - generic [ref=e528]:
+                        - generic [ref=e529]: "7"
+                        - generic [ref=e531]: 롯데
+                    - generic [ref=e532]: 📍 사직야구장
+              - generic [ref=e533]:
+                - heading "🏟️ KBO 10개 구단" [level=3] [ref=e534]:
+                  - generic [ref=e535]: 🏟️
+                  - text: KBO 10개 구단
+                - paragraph [ref=e536]: 구단을 선택하면 테마가 적용됩니다
+              - generic [ref=e537]:
+                - button "L LG 트윈스 서울 (잠실) 승리의 쌍둥이 2 우승 1982 창단" [ref=e538] [cursor=pointer]:
+                  - generic [ref=e539]:
+                    - generic [ref=e542]: L
+                    - generic [ref=e543]:
+                      - heading "LG 트윈스" [level=4] [ref=e544]
+                      - paragraph [ref=e545]: 서울 (잠실)
+                      - paragraph [ref=e546]: 승리의 쌍둥이
+                    - generic [ref=e547]:
+                      - generic [ref=e548]:
+                        - generic [ref=e549]: "2"
+                        - generic [ref=e550]: 우승
+                      - generic [ref=e551]:
+                        - generic [ref=e552]: "1982"
+                        - generic [ref=e553]: 창단
+                - button "두 두산 베어스 서울 (잠실) 베어스 왕국 6 우승 1982 창단" [ref=e554] [cursor=pointer]:
+                  - generic [ref=e555]:
+                    - generic [ref=e558]: 두
+                    - generic [ref=e559]:
+                      - heading "두산 베어스" [level=4] [ref=e560]
+                      - paragraph [ref=e561]: 서울 (잠실)
+                      - paragraph [ref=e562]: 베어스 왕국
+                    - generic [ref=e563]:
+                      - generic [ref=e564]:
+                        - generic [ref=e565]: "6"
+                        - generic [ref=e566]: 우승
+                      - generic [ref=e567]:
+                        - generic [ref=e568]: "1982"
+                        - generic [ref=e569]: 창단
+                - button "K KT 위즈 수원 마법사들의 반란 0 우승 2015 창단" [ref=e570] [cursor=pointer]:
+                  - generic [ref=e571]:
+                    - generic [ref=e574]: K
+                    - generic [ref=e575]:
+                      - heading "KT 위즈" [level=4] [ref=e576]
+                      - paragraph [ref=e577]: 수원
+                      - paragraph [ref=e578]: 마법사들의 반란
+                    - generic [ref=e579]:
+                      - generic [ref=e580]:
+                        - generic [ref=e581]: "0"
+                        - generic [ref=e582]: 우승
+                      - generic [ref=e583]:
+                        - generic [ref=e584]: "2015"
+                        - generic [ref=e585]: 창단
+                - button "삼 삼성 라이온즈 대구 라이온의 후예 8 우승 1982 창단" [ref=e586] [cursor=pointer]:
+                  - generic [ref=e587]:
+                    - generic [ref=e590]: 삼
+                    - generic [ref=e591]:
+                      - heading "삼성 라이온즈" [level=4] [ref=e592]
+                      - paragraph [ref=e593]: 대구
+                      - paragraph [ref=e594]: 라이온의 후예
+                    - generic [ref=e595]:
+                      - generic [ref=e596]:
+                        - generic [ref=e597]: "8"
+                        - generic [ref=e598]: 우승
+                      - generic [ref=e599]:
+                        - generic [ref=e600]: "1982"
+                        - generic [ref=e601]: 창단
+                - button "N NC 다이노스 창원 공룡의 시대 0 우승 2011 창단" [ref=e602] [cursor=pointer]:
+                  - generic [ref=e603]:
+                    - generic [ref=e606]: "N"
+                    - generic [ref=e607]:
+                      - heading "NC 다이노스" [level=4] [ref=e608]
+                      - paragraph [ref=e609]: 창원
+                      - paragraph [ref=e610]: 공룡의 시대
+                    - generic [ref=e611]:
+                      - generic [ref=e612]:
+                        - generic [ref=e613]: "0"
+                        - generic [ref=e614]: 우승
+                      - generic [ref=e615]:
+                        - generic [ref=e616]: "2011"
+                        - generic [ref=e617]: 창단
+                - button "K KIA 타이거즈 광주 호랑이의 기백 11 우승 1982 창단" [ref=e618] [cursor=pointer]:
+                  - generic [ref=e619]:
+                    - generic [ref=e622]: K
+                    - generic [ref=e623]:
+                      - heading "KIA 타이거즈" [level=4] [ref=e624]
+                      - paragraph [ref=e625]: 광주
+                      - paragraph [ref=e626]: 호랑이의 기백
+                    - generic [ref=e627]:
+                      - generic [ref=e628]:
+                        - generic [ref=e629]: "11"
+                        - generic [ref=e630]: 우승
+                      - generic [ref=e631]:
+                        - generic [ref=e632]: "1982"
+                        - generic [ref=e633]: 창단
+                - button "롯 롯데 자이언츠 부산 바다의 거인 2 우승 1982 창단" [ref=e634] [cursor=pointer]:
+                  - generic [ref=e635]:
+                    - generic [ref=e638]: 롯
+                    - generic [ref=e639]:
+                      - heading "롯데 자이언츠" [level=4] [ref=e640]
+                      - paragraph [ref=e641]: 부산
+                      - paragraph [ref=e642]: 바다의 거인
+                    - generic [ref=e643]:
+                      - generic [ref=e644]:
+                        - generic [ref=e645]: "2"
+                        - generic [ref=e646]: 우승
+                      - generic [ref=e647]:
+                        - generic [ref=e648]: "1982"
+                        - generic [ref=e649]: 창단
+                - button "S SSG 랜더스 인천 새로운 전설 1 우승 2000 창단" [ref=e650] [cursor=pointer]:
+                  - generic [ref=e651]:
+                    - generic [ref=e654]: S
+                    - generic [ref=e655]:
+                      - heading "SSG 랜더스" [level=4] [ref=e656]
+                      - paragraph [ref=e657]: 인천
+                      - paragraph [ref=e658]: 새로운 전설
+                    - generic [ref=e659]:
+                      - generic [ref=e660]:
+                        - generic [ref=e661]: "1"
+                        - generic [ref=e662]: 우승
+                      - generic [ref=e663]:
+                        - generic [ref=e664]: "2000"
+                        - generic [ref=e665]: 창단
+                - button "한 한화 이글스 대전 불굴의 독수리 1 우승 1986 창단" [ref=e666] [cursor=pointer]:
+                  - generic [ref=e667]:
+                    - generic [ref=e670]: 한
+                    - generic [ref=e671]:
+                      - heading "한화 이글스" [level=4] [ref=e672]
+                      - paragraph [ref=e673]: 대전
+                      - paragraph [ref=e674]: 불굴의 독수리
+                    - generic [ref=e675]:
+                      - generic [ref=e676]:
+                        - generic [ref=e677]: "1"
+                        - generic [ref=e678]: 우승
+                      - generic [ref=e679]:
+                        - generic [ref=e680]: "1986"
+                        - generic [ref=e681]: 창단
+                - button "키 키움 히어로즈 서울 (고척) 서울의 영웅 0 우승 2008 창단" [ref=e682] [cursor=pointer]:
+                  - generic [ref=e683]:
+                    - generic [ref=e686]: 키
+                    - generic [ref=e687]:
+                      - heading "키움 히어로즈" [level=4] [ref=e688]
+                      - paragraph [ref=e689]: 서울 (고척)
+                      - paragraph [ref=e690]: 서울의 영웅
+                    - generic [ref=e691]:
+                      - generic [ref=e692]:
+                        - generic [ref=e693]: "0"
+                        - generic [ref=e694]: 우승
+                      - generic [ref=e695]:
+                        - generic [ref=e696]: "2008"
+                        - generic [ref=e697]: 창단
+          - generic [ref=e698]:
+            - generic [ref=e699]:
+              - heading "KBO 10개 구단 쇼케이스" [level=2] [ref=e700]
+              - paragraph [ref=e701]: 각 구단의 고유한 컬러와 홀로그래픽 효과를 확인하세요
+            - generic [ref=e702]:
+              - button "오지환 카드 (클릭하여 뒤집기)" [ref=e706] [cursor=pointer]:
+                - generic [ref=e707]:
+                  - generic:
+                    - generic:
+                      - generic: LG
+                      - generic: "#6"
+                    - generic:
+                      - heading "오지환" [level=3]
+                      - paragraph: 내야수
+                      - generic: ★★★★★
+                - generic [ref=e711]:
+                  - img [ref=e713]:
+                    - generic [ref=e715]: KBO
+                  - generic [ref=e716]:
+                    - heading "LG TWINS" [level=2] [ref=e717]
+                    - paragraph [ref=e718]: LG 트윈스
+                  - img [ref=e724]
+                  - generic [ref=e730]:
+                    - generic [ref=e731]: 2024 SEASON
+                    - generic [ref=e732]: LIMITED EDITION
+              - button "양의지 카드 (클릭하여 뒤집기)" [ref=e736] [cursor=pointer]:
+                - generic [ref=e737]:
+                  - generic:
+                    - generic:
+                      - generic: DOOSAN
+                      - generic: "#25"
+                    - generic:
+                      - heading "양의지" [level=3]
+                      - paragraph: 포수
+                      - generic: ★★★★★
+                - generic [ref=e741]:
+                  - img [ref=e743]:
+                    - generic [ref=e745]: KBO
+                  - generic [ref=e746]:
+                    - heading "DOOSAN BEARS" [level=2] [ref=e747]
+                    - paragraph [ref=e748]: 두산 베어스
+                  - img [ref=e754]
+                  - generic [ref=e760]:
+                    - generic [ref=e761]: 2024 SEASON
+                    - generic [ref=e762]: LIMITED EDITION
+              - button "강백호 카드 (클릭하여 뒤집기)" [ref=e766] [cursor=pointer]:
+                - generic [ref=e767]:
+                  - generic:
+                    - generic:
+                      - generic: KT
+                      - generic: "#50"
+                    - generic:
+                      - heading "강백호" [level=3]
+                      - paragraph: 외야수
+                      - generic: ★★★★★
+                - generic [ref=e771]:
+                  - img [ref=e773]:
+                    - generic [ref=e775]: KBO
+                  - generic [ref=e776]:
+                    - heading "KT WIZ" [level=2] [ref=e777]
+                    - paragraph [ref=e778]: KT 위즈
+                  - img [ref=e784]
+                  - generic [ref=e790]:
+                    - generic [ref=e791]: 2024 SEASON
+                    - generic [ref=e792]: LIMITED EDITION
+              - button "구자욱 카드 (클릭하여 뒤집기)" [ref=e796] [cursor=pointer]:
+                - generic [ref=e797]:
+                  - generic:
+                    - generic:
+                      - generic: SAMSUNG
+                      - generic: "#5"
+                    - generic:
+                      - heading "구자욱" [level=3]
+                      - paragraph: 외야수
+                      - generic: ★★★★★
+                - generic [ref=e801]:
+                  - img [ref=e803]:
+                    - generic [ref=e805]: KBO
+                  - generic [ref=e806]:
+                    - heading "SAMSUNG LIONS" [level=2] [ref=e807]
+                    - paragraph [ref=e808]: 삼성 라이온즈
+                  - img [ref=e814]
+                  - generic [ref=e820]:
+                    - generic [ref=e821]: 2024 SEASON
+                    - generic [ref=e822]: LIMITED EDITION
+              - button "박민우 카드 (클릭하여 뒤집기)" [ref=e826] [cursor=pointer]:
+                - generic [ref=e827]:
+                  - generic:
+                    - generic:
+                      - generic: NC
+                      - generic: "#23"
+                    - generic:
+                      - heading "박민우" [level=3]
+                      - paragraph: 내야수
+                      - generic: ★★★★★
+                - generic [ref=e831]:
+                  - img [ref=e833]:
+                    - generic [ref=e835]: KBO
+                  - generic [ref=e836]:
+                    - heading "NC DINOS" [level=2] [ref=e837]
+                    - paragraph [ref=e838]: NC 다이노스
+                  - img [ref=e844]
+                  - generic [ref=e850]:
+                    - generic [ref=e851]: 2024 SEASON
+                    - generic [ref=e852]: LIMITED EDITION
+              - button "김도영 카드 (클릭하여 뒤집기)" [ref=e856] [cursor=pointer]:
+                - generic [ref=e857]:
+                  - generic:
+                    - generic:
+                      - generic: KIA
+                      - generic: "#5"
+                    - generic:
+                      - heading "김도영" [level=3]
+                      - paragraph: 내야수
+                      - generic: ★★★★★
+                - generic [ref=e861]:
+                  - img [ref=e863]:
+                    - generic [ref=e865]: KBO
+                  - generic [ref=e866]:
+                    - heading "KIA TIGERS" [level=2] [ref=e867]
+                    - paragraph [ref=e868]: KIA 타이거즈
+                  - img [ref=e874]
+                  - generic [ref=e880]:
+                    - generic [ref=e881]: 2024 SEASON
+                    - generic [ref=e882]: LIMITED EDITION
+              - button "박세웅 카드 (클릭하여 뒤집기)" [ref=e886] [cursor=pointer]:
+                - generic [ref=e887]:
+                  - generic:
+                    - generic:
+                      - generic: LOTTE
+                      - generic: "#37"
+                    - generic:
+                      - heading "박세웅" [level=3]
+                      - paragraph: 투수
+                      - generic: ★★★★★
+                - generic [ref=e891]:
+                  - img [ref=e893]:
+                    - generic [ref=e895]: KBO
+                  - generic [ref=e896]:
+                    - heading "LOTTE GIANTS" [level=2] [ref=e897]
+                    - paragraph [ref=e898]: 롯데 자이언츠
+                  - img [ref=e904]
+                  - generic [ref=e910]:
+                    - generic [ref=e911]: 2024 SEASON
+                    - generic [ref=e912]: LIMITED EDITION
+              - button "추신수 카드 (클릭하여 뒤집기)" [ref=e916] [cursor=pointer]:
+                - generic [ref=e917]:
+                  - generic:
+                    - generic:
+                      - generic: SSG
+                      - generic: "#0"
+                    - generic:
+                      - heading "추신수" [level=3]
+                      - paragraph: 외야수
+                      - generic: ★★★★★
+                - generic [ref=e921]:
+                  - img [ref=e923]:
+                    - generic [ref=e925]: KBO
+                  - generic [ref=e926]:
+                    - heading "SSG LANDERS" [level=2] [ref=e927]
+                    - paragraph [ref=e928]: SSG 랜더스
+                  - img [ref=e934]
+                  - generic [ref=e940]:
+                    - generic [ref=e941]: 2024 SEASON
+                    - generic [ref=e942]: LIMITED EDITION
+              - button "노시환 카드 (클릭하여 뒤집기)" [ref=e946] [cursor=pointer]:
+                - generic [ref=e947]:
+                  - generic:
+                    - generic:
+                      - generic: HANWHA
+                      - generic: "#31"
+                    - generic:
+                      - heading "노시환" [level=3]
+                      - paragraph: 내야수
+                      - generic: ★★★★★
+                - generic [ref=e951]:
+                  - img [ref=e953]:
+                    - generic [ref=e955]: KBO
+                  - generic [ref=e956]:
+                    - heading "HANWHA EAGLES" [level=2] [ref=e957]
+                    - paragraph [ref=e958]: 한화 이글스
+                  - img [ref=e964]
+                  - generic [ref=e970]:
+                    - generic [ref=e971]: 2024 SEASON
+                    - generic [ref=e972]: LIMITED EDITION
+              - button "이정후 카드 (클릭하여 뒤집기)" [ref=e976] [cursor=pointer]:
+                - generic [ref=e977]:
+                  - generic:
+                    - generic:
+                      - generic: KIWOOM
+                      - generic: "#51"
+                    - generic:
+                      - heading "이정후" [level=3]
+                      - paragraph: 외야수
+                      - generic: ★★★★★
+                - generic [ref=e981]:
+                  - img [ref=e983]:
+                    - generic [ref=e985]: KBO
+                  - generic [ref=e986]:
+                    - heading "KIWOOM HEROES" [level=2] [ref=e987]
+                    - paragraph [ref=e988]: 키움 히어로즈
+                  - img [ref=e994]
+                  - generic [ref=e1000]:
+                    - generic [ref=e1001]: 2024 SEASON
+                    - generic [ref=e1002]: LIMITED EDITION
+          - generic [ref=e1003]:
+            - generic [ref=e1004]:
+              - heading "포토카드 문화" [level=2] [ref=e1005]
+              - paragraph [ref=e1006]: KBO 야구 추억을 간직하는 특별한 방법
+            - generic [ref=e1007]:
+              - generic [ref=e1008]:
+                - generic [ref=e1009]: 💝
+                - heading "소장의 즐거움" [level=3] [ref=e1010]
+                - paragraph [ref=e1011]: 잊지 못할 야구 순간을 프리미엄 홀로그래픽 카드로 영원히 간직하세요
+              - generic [ref=e1012]:
+                - generic [ref=e1013]: 🏆
+                - heading "컬렉션의 완성" [level=3] [ref=e1014]
+                - paragraph [ref=e1015]: 시즌별, 선수별 카드를 모아 나만의 특별한 컬렉션을 완성하세요
+              - generic [ref=e1016]:
+                - generic [ref=e1017]: ✨
+                - heading "자랑의 순간" [level=3] [ref=e1018]
+                - paragraph [ref=e1019]: 희귀하고 특별한 카드를 커뮤니티에 자랑하고 팬들과 공유하세요
+              - generic [ref=e1020]:
+                - generic [ref=e1021]: ⚾
+                - heading "응원의 증표" [level=3] [ref=e1022]
+                - paragraph [ref=e1023]: 좋아하는 구단과 선수의 카드로 진정한 팬심을 표현하세요
+              - generic [ref=e1024]:
+                - generic [ref=e1025]: 🎁
+                - heading "기념품의 가치" [level=3] [ref=e1026]
+                - paragraph [ref=e1027]: 홈런, 우승 등 역사적 순간을 담은 카드는 소중한 추억이 됩니다
+              - generic [ref=e1028]:
+                - generic [ref=e1029]: 🤝
+                - heading "팬 문화의 중심" [level=3] [ref=e1030]
+                - paragraph [ref=e1031]: 카드 교환, 자랑하기로 KBO 팬들과 특별한 유대감을 형성하세요
+          - generic [ref=e1033]:
+            - heading "지금 시작하세요" [level=2] [ref=e1034]
+            - paragraph [ref=e1035]: KBO 야구의 감동적인 순간들을 홀로그래픽 카드로 경험해보세요
+            - generic [ref=e1036]:
+              - link "프로토타입 보기" [ref=e1037] [cursor=pointer]:
+                - /url: /v2-prototype
+              - link "갤러리 둘러보기" [ref=e1038] [cursor=pointer]:
+                - /url: /gallery
+      - contentinfo [ref=e1039]:
+        - generic [ref=e1040]:
+          - generic [ref=e1041]:
+            - generic [ref=e1042]:
+              - heading "Baseball 홀로그래픽 카드" [level=3] [ref=e1043]
+              - paragraph [ref=e1044]:
+                - text: 프리미엄 디자인으로 제작된
+                - text: Baseball 야구 홀로그래픽 카드 커뮤니티 플랫폼
+            - generic [ref=e1045]:
+              - heading "플랫폼" [level=4] [ref=e1046]
+              - list [ref=e1047]:
+                - listitem [ref=e1048]:
+                  - link "카드 갤러리" [ref=e1049] [cursor=pointer]:
+                    - /url: /gallery
+                - listitem [ref=e1050]:
+                  - link "카드 제작" [ref=e1051] [cursor=pointer]:
+                    - /url: /create
+                - listitem [ref=e1052]:
+                  - link "커뮤니티" [ref=e1053] [cursor=pointer]:
+                    - /url: /community
+                - listitem [ref=e1054]:
+                  - link "마켓플레이스" [ref=e1055] [cursor=pointer]:
+                    - /url: /marketplace
+            - generic [ref=e1056]:
+              - heading "Baseball 구단" [level=4] [ref=e1057]
+              - list [ref=e1058]:
+                - listitem [ref=e1059]:
+                  - link "LG 트윈스" [ref=e1060] [cursor=pointer]:
+                    - /url: /teams/lg
+                - listitem [ref=e1061]:
+                  - link "두산 베어스" [ref=e1062] [cursor=pointer]:
+                    - /url: /teams/doosan
+                - listitem [ref=e1063]:
+                  - link "KT 위즈" [ref=e1064] [cursor=pointer]:
+                    - /url: /teams/kt
+                - listitem [ref=e1065]:
+                  - link "삼성 라이온즈" [ref=e1066] [cursor=pointer]:
+                    - /url: /teams/samsung
+                - listitem [ref=e1067]:
+                  - link "롯데 자이언츠" [ref=e1068] [cursor=pointer]:
+                    - /url: /teams/lotte
+            - generic [ref=e1069]:
+              - heading "지원" [level=4] [ref=e1070]
+              - list [ref=e1071]:
+                - listitem [ref=e1072]:
+                  - link "도움말" [ref=e1073] [cursor=pointer]:
+                    - /url: /help
+                - listitem [ref=e1074]:
+                  - link "문의하기" [ref=e1075] [cursor=pointer]:
+                    - /url: /contact
+                - listitem [ref=e1076]:
+                  - link "개인정보처리방침" [ref=e1077] [cursor=pointer]:
+                    - /url: /privacy
+                - listitem [ref=e1078]:
+                  - link "이용약관" [ref=e1079] [cursor=pointer]:
+                    - /url: /terms
+          - generic [ref=e1080]:
+            - paragraph [ref=e1081]: © 2024 Baseball 홀로그래픽 카드 커뮤니티. 야구의 감동을 카드로.
+            - generic [ref=e1082]:
+              - link "Twitter" [ref=e1083] [cursor=pointer]:
+                - /url: https://twitter.com
+                - text: 🐦
+              - link "Instagram" [ref=e1084] [cursor=pointer]:
+                - /url: https://instagram.com
+                - text: 📷
+              - link "YouTube" [ref=e1085] [cursor=pointer]:
+                - /url: https://youtube.com
+                - text: 📺
+    - generic [ref=e1086]: 홀로그래픽 카드 플랫폼 - Design System V2
+  - generic: "FPS: 54.5 (min: 0.4) Frame: 17.10ms Drops: 24 Long: 32 Status: WARNING"
+```

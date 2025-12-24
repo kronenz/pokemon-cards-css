@@ -135,8 +135,8 @@ export default defineConfig({
   ],
 
   // Global test configuration
-  globalSetup: require.resolve('./tests/global-setup.ts'),
-  globalTeardown: require.resolve('./tests/global-teardown.ts'),
+  globalSetup: './tests/global-setup.ts',
+  globalTeardown: './tests/global-teardown.ts',
 
   // Test timeout configuration
   timeout: 30000,

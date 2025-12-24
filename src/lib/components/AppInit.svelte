@@ -1,9 +1,97 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
+  import { pb } from '$lib/pocketbase';
+  import { currentUser } from '$lib/stores/unified';
+  import type { UnifiedUser } from '$lib/types/unified';
+
+  /**
+   * Convert PocketBase user model to UnifiedUser
+   */
+  function convertToUnifiedUser(pbUser: any): UnifiedUser | null {
+    if (!pbUser) return null;
+
+    return {
+      id: pbUser.id,
+      username: pbUser.username || pbUser.name || pbUser.email?.split('@')[0] || 'User',
+      email: pbUser.email || '',
+      avatar: pbUser.avatar
+        ? pb.files.getURL(pbUser, pbUser.avatar)
+        : '/default-avatar.png',
+      createdAt: new Date(pbUser.created || Date.now()),
+      lastLoginAt: new Date(),
+      fanProfile: {
+        fanLevel: { level: 1, name: '루키팬' },
+        currentPoints: 0,
+        favoriteTeam: pbUser.favoriteTeam || '',
+        achievedBadges: [],
+        joinedFanclubs: []
+      },
+      creatorProfile: {
+        creatorLevel: 'bronze',
+        stats: {
+          totalCards: pbUser.stats?.cardsCreated || 0,
+          totalLikes: pbUser.stats?.totalLikes || 0,
+          totalDownloads: 0,
+          averageRating: 0,
+          followers: pbUser.stats?.followers || 0,
+          following: pbUser.stats?.following || 0
+        },
+        isVerified: pbUser.verified || false,
+        specializations: []
+      },
+      collections: {
+        owned: [],
+        collectionProgress: [],
+        totalCards: 0,
+        rareCards: 0
+      },
+      preferences: {
+        theme: 'dark',
+        notifications: {
+          newFollower: true,
+          cardLike: true,
+          cardComment: true,
+          levelUp: true
+        },
+        privacy: {
+          showCollections: true,
+          showActivity: true
+        }
+      }
+    };
+  }
+
+  /**
+   * Sync PocketBase authStore with unified currentUser store
+   */
+  function syncAuthState() {
+    if (!browser) return;
+
+    const isValid = pb.authStore.isValid;
+    const model = pb.authStore.model;
+
+    if (isValid && model) {
+      currentUser.set(convertToUnifiedUser(model));
+    } else {
+      currentUser.set(null);
+    }
+  }
 
   onMount(() => {
     if (!browser) return;
+
+    // Sync auth state on mount
+    syncAuthState();
+
+    // Subscribe to PocketBase auth changes
+    pb.authStore.onChange((token, model) => {
+      if (token && model) {
+        currentUser.set(convertToUnifiedUser(model));
+      } else {
+        currentUser.set(null);
+      }
+    });
 
     // Apple-style theme detection and management
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
