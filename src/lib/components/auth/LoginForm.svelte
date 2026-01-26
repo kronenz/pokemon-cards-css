@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { supabaseAuthService } from '$lib/services/supabaseAuthService';
+	import { authService } from '$lib/services/authService';
 	import { goto } from '$app/navigation';
 
 	let email = '';
@@ -17,7 +17,7 @@
 		error = '';
 
 		try {
-			const user = await supabaseAuthService.signInWithEmail(email, password);
+			const user = await authService.signInWithEmail(email, password);
 
 			if (user) {
 				goto('/');
@@ -37,7 +37,7 @@
 		error = '';
 
 		try {
-			await supabaseAuthService.signInWithOAuth(provider);
+			await authService.signInWithOAuth(provider);
 		} catch (err) {
 			console.error('OAuth login error:', err);
 			error = `${provider} 로그인 중 오류가 발생했습니다.`;

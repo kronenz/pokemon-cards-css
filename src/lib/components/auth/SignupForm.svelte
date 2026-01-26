@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { supabaseAuthService } from '$lib/services/supabaseAuthService';
+	import { authService } from '$lib/services/authService';
 	import { goto } from '$app/navigation';
 
 	let email = '';
@@ -12,7 +12,6 @@
 	async function handleSignup() {
 		error = '';
 
-		// Validation
 		if (!email || !password || !confirmPassword) {
 			error = '모든 필드를 입력해주세요.';
 			return;
@@ -31,11 +30,7 @@
 		isLoading = true;
 
 		try {
-			const user = await supabaseAuthService.signUpWithEmail(
-				email,
-				password,
-				displayName || undefined
-			);
+			const user = await authService.signUpWithEmail(email, password, displayName || undefined);
 
 			if (user) {
 				goto('/');
@@ -55,7 +50,7 @@
 		error = '';
 
 		try {
-			await supabaseAuthService.signInWithOAuth(provider);
+			await authService.signInWithOAuth(provider);
 		} catch (err) {
 			console.error('OAuth signup error:', err);
 			error = `${provider} 회원가입 중 오류가 발생했습니다.`;

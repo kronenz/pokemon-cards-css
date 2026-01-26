@@ -1,23 +1,23 @@
-// Grade Service Tests
-
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { gradeService } from '../gradeService';
 import { USER_GRADES } from '$lib/types/auth';
 import type { UserStats } from '$lib/types/auth';
-
-// Mock PocketBase
-const mockPb = {
-	collection: vi.fn(() => ({
-		getOne: vi.fn(),
-		update: vi.fn(),
-		getList: vi.fn(),
-		getFullList: vi.fn()
-	}))
-};
+import { pb } from '$lib/pocketbase';
 
 vi.mock('$lib/pocketbase', () => ({
-	pb: mockPb
+	pb: {
+		collection: vi.fn(() => ({
+			getOne: vi.fn(),
+			update: vi.fn(),
+			getList: vi.fn(),
+			getFullList: vi.fn(),
+		})),
+	},
 }));
+
+const mockPb = pb as unknown as {
+	collection: ReturnType<typeof vi.fn>;
+};
 
 describe('GradeService', () => {
 	beforeEach(() => {
@@ -41,7 +41,7 @@ describe('GradeService', () => {
 				featuredCards: 0,
 				monthlyActive: true,
 				joinDate: new Date().toISOString(),
-				lastActive: new Date().toISOString()
+				lastActive: new Date().toISOString(),
 			};
 
 			const result = gradeService.calculateGrade(stats);
@@ -64,7 +64,7 @@ describe('GradeService', () => {
 				featuredCards: 0,
 				monthlyActive: true,
 				joinDate: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 days ago
-				lastActive: new Date().toISOString()
+				lastActive: new Date().toISOString(),
 			};
 
 			const result = gradeService.calculateGrade(stats);
@@ -76,17 +76,17 @@ describe('GradeService', () => {
 
 		it('should calculate supporter grade for engaged user', () => {
 			const stats: UserStats = {
-				cardsCreated: 50,
-				totalLikes: 500,
-				totalViews: 5000,
-				followers: 20,
-				following: 30,
+				cardsCreated: 15,
+				totalLikes: 100,
+				totalViews: 1000,
+				followers: 10,
+				following: 20,
 				gradePoints: 0,
-				commentsReceived: 100,
-				featuredCards: 2,
+				commentsReceived: 30,
+				featuredCards: 0,
 				monthlyActive: true,
-				joinDate: new Date(Date.now() - 90 * 24 * 60 * 60 * 1000).toISOString(), // 90 days ago
-				lastActive: new Date().toISOString()
+				joinDate: new Date(Date.now() - 90 * 24 * 60 * 60 * 1000).toISOString(),
+				lastActive: new Date().toISOString(),
 			};
 
 			const result = gradeService.calculateGrade(stats);
@@ -98,17 +98,17 @@ describe('GradeService', () => {
 
 		it('should calculate expert grade for power user', () => {
 			const stats: UserStats = {
-				cardsCreated: 150,
-				totalLikes: 2000,
-				totalViews: 20000,
-				followers: 100,
-				following: 80,
+				cardsCreated: 50,
+				totalLikes: 500,
+				totalViews: 5000,
+				followers: 30,
+				following: 40,
 				gradePoints: 0,
-				commentsReceived: 500,
-				featuredCards: 10,
+				commentsReceived: 100,
+				featuredCards: 2,
 				monthlyActive: true,
-				joinDate: new Date(Date.now() - 180 * 24 * 60 * 60 * 1000).toISOString(), // 180 days ago
-				lastActive: new Date().toISOString()
+				joinDate: new Date(Date.now() - 180 * 24 * 60 * 60 * 1000).toISOString(),
+				lastActive: new Date().toISOString(),
 			};
 
 			const result = gradeService.calculateGrade(stats);
@@ -130,7 +130,7 @@ describe('GradeService', () => {
 				featuredCards: 50,
 				monthlyActive: true,
 				joinDate: new Date(Date.now() - 365 * 24 * 60 * 60 * 1000).toISOString(), // 1 year ago
-				lastActive: new Date().toISOString()
+				lastActive: new Date().toISOString(),
 			};
 
 			const result = gradeService.calculateGrade(stats);
@@ -145,19 +145,19 @@ describe('GradeService', () => {
 	describe('Points Calculation', () => {
 		it('should award correct points for different activities', () => {
 			const gradeServiceInstance = gradeService as any;
-			
+
 			const stats: UserStats = {
-				cardsCreated: 10,      // 10 * 10 = 100 points
-				totalLikes: 50,        // 50 * 2 = 100 points
-				totalViews: 1000,      // 1000 * 0.1 = 100 points
-				followers: 20,         // 20 * 5 = 100 points
+				cardsCreated: 10, // 10 * 10 = 100 points
+				totalLikes: 50, // 50 * 2 = 100 points
+				totalViews: 1000, // 1000 * 0.1 = 100 points
+				followers: 20, // 20 * 5 = 100 points
 				following: 15,
 				gradePoints: 0,
-				commentsReceived: 30,  // 30 * 3 = 90 points
-				featuredCards: 2,      // 2 * 50 = 100 points
-				monthlyActive: true,   // +20 points
+				commentsReceived: 30, // 30 * 3 = 90 points
+				featuredCards: 2, // 2 * 50 = 100 points
+				monthlyActive: true, // +20 points
 				joinDate: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000).toISOString(), // 60 days ago (+10 points)
-				lastActive: new Date().toISOString()
+				lastActive: new Date().toISOString(),
 			};
 
 			const totalPoints = gradeServiceInstance.calculateTotalPoints(stats);
@@ -169,7 +169,7 @@ describe('GradeService', () => {
 
 		it('should apply quality bonus for high engagement', () => {
 			const gradeServiceInstance = gradeService as any;
-			
+
 			const stats: UserStats = {
 				cardsCreated: 10,
 				totalLikes: 150, // 15 likes per card (>10 threshold)
@@ -181,19 +181,19 @@ describe('GradeService', () => {
 				featuredCards: 0,
 				monthlyActive: false,
 				joinDate: new Date().toISOString(),
-				lastActive: new Date().toISOString()
+				lastActive: new Date().toISOString(),
 			};
 
 			const totalPoints = gradeServiceInstance.calculateTotalPoints(stats);
 
 			// Should include quality bonus: 10 cards * 5 bonus = 50 extra points
-			const expectedBase = (10 * 10) + (150 * 2) + (1000 * 0.1); // 500
+			const expectedBase = 10 * 10 + 150 * 2 + 1000 * 0.1; // 500
 			expect(totalPoints).toBeGreaterThan(expectedBase);
 		});
 
 		it('should apply monthly active bonus', () => {
 			const gradeServiceInstance = gradeService as any;
-			
+
 			const statsActive: UserStats = {
 				cardsCreated: 5,
 				totalLikes: 10,
@@ -205,12 +205,12 @@ describe('GradeService', () => {
 				featuredCards: 0,
 				monthlyActive: true,
 				joinDate: new Date().toISOString(),
-				lastActive: new Date().toISOString()
+				lastActive: new Date().toISOString(),
 			};
 
 			const statsInactive: UserStats = {
 				...statsActive,
-				monthlyActive: false
+				monthlyActive: false,
 			};
 
 			const activePoints = gradeServiceInstance.calculateTotalPoints(statsActive);
@@ -227,9 +227,9 @@ describe('GradeService', () => {
 			const benefits = gradeService.getGradeBenefits(rookieGrade);
 
 			expect(benefits).toHaveLength(2);
-			expect(benefits.some(b => b.name === '기본 카드 제작')).toBe(true);
-			expect(benefits.some(b => b.name === '커뮤니티 참여')).toBe(true);
-			expect(benefits.every(b => b.unlocked)).toBe(true);
+			expect(benefits.some((b) => b.name === '기본 카드 제작')).toBe(true);
+			expect(benefits.some((b) => b.name === '커뮤니티 참여')).toBe(true);
+			expect(benefits.every((b) => b.unlocked)).toBe(true);
 		});
 
 		it('should return cumulative benefits for higher grades', () => {
@@ -238,9 +238,9 @@ describe('GradeService', () => {
 
 			// Should include benefits from rookie, fan, and supporter
 			expect(benefits.length).toBeGreaterThan(4);
-			expect(benefits.some(b => b.name === '기본 카드 제작')).toBe(true); // rookie
-			expect(benefits.some(b => b.name === '응원가 BGM')).toBe(true); // fan
-			expect(benefits.some(b => b.name === '프리미엄 편집 도구')).toBe(true); // supporter
+			expect(benefits.some((b) => b.name === '기본 카드 제작')).toBe(true); // rookie
+			expect(benefits.some((b) => b.name === '응원가 BGM')).toBe(true); // fan
+			expect(benefits.some((b) => b.name === '프리미엄 편집 도구')).toBe(true); // supporter
 		});
 
 		it('should return all benefits for legend grade', () => {
@@ -249,8 +249,8 @@ describe('GradeService', () => {
 
 			// Should include all benefits from all grades
 			expect(benefits.length).toBeGreaterThan(10);
-			expect(benefits.some(b => b.name === '명예의 전당')).toBe(true);
-			expect(benefits.some(b => b.name === '모든 기능')).toBe(true);
+			expect(benefits.some((b) => b.name === '명예의 전당')).toBe(true);
+			expect(benefits.some((b) => b.name === '모든 기능')).toBe(true);
 		});
 	});
 
@@ -269,23 +269,26 @@ describe('GradeService', () => {
 					featuredCards: 1,
 					monthlyActive: true,
 					joinDate: new Date().toISOString(),
-					lastActive: new Date().toISOString()
-				}
+					lastActive: new Date().toISOString(),
+				},
 			};
 
 			const mockCollection = {
 				getOne: vi.fn().mockResolvedValue(mockUser),
-				update: vi.fn().mockResolvedValue(mockUser)
+				update: vi.fn().mockResolvedValue(mockUser),
 			};
 			mockPb.collection.mockReturnValue(mockCollection);
 
 			const result = await gradeService.updateUserGrade('user123');
 
 			expect(mockCollection.getOne).toHaveBeenCalledWith('user123');
-			expect(mockCollection.update).toHaveBeenCalledWith('user123', expect.objectContaining({
-				grade: expect.any(String),
-				'stats.gradePoints': expect.any(Number)
-			}));
+			expect(mockCollection.update).toHaveBeenCalledWith(
+				'user123',
+				expect.objectContaining({
+					grade: expect.any(String),
+					'stats.gradePoints': expect.any(Number),
+				})
+			);
 
 			expect(result.currentGrade).toBeDefined();
 			expect(result.currentGrade.points).toBeGreaterThan(0);
@@ -305,8 +308,8 @@ describe('GradeService', () => {
 					featuredCards: 0,
 					monthlyActive: true,
 					joinDate: new Date().toISOString(),
-					lastActive: new Date().toISOString()
-				}
+					lastActive: new Date().toISOString(),
+				},
 			};
 
 			const mockCollection = {
@@ -316,9 +319,9 @@ describe('GradeService', () => {
 					stats: {
 						...mockUser.stats,
 						cardsCreated: 6,
-						lastActive: new Date().toISOString()
-					}
-				})
+						lastActive: new Date().toISOString(),
+					},
+				}),
 			};
 			mockPb.collection.mockReturnValue(mockCollection);
 
@@ -326,16 +329,19 @@ describe('GradeService', () => {
 				type: 'card_created',
 				points: 10,
 				description: '홀로그래픽 카드 제작',
-				timestamp: new Date()
+				timestamp: new Date(),
 			});
 
 			expect(mockCollection.getOne).toHaveBeenCalledWith('user123');
-			expect(mockCollection.update).toHaveBeenCalledWith('user123', expect.objectContaining({
-				stats: expect.objectContaining({
-					cardsCreated: 6,
-					lastActive: expect.any(String)
+			expect(mockCollection.update).toHaveBeenCalledWith(
+				'user123',
+				expect.objectContaining({
+					stats: expect.objectContaining({
+						cardsCreated: 6,
+						lastActive: expect.any(String),
+					}),
 				})
-			}));
+			);
 		});
 
 		it('should get grade leaderboard', async () => {
@@ -344,18 +350,18 @@ describe('GradeService', () => {
 					{
 						id: 'user1',
 						displayName: 'Top User',
-						stats: { gradePoints: 5000 }
+						stats: { gradePoints: 6000 },
 					},
 					{
 						id: 'user2',
 						displayName: 'Second User',
-						stats: { gradePoints: 3000 }
-					}
-				]
+						stats: { gradePoints: 3000 },
+					},
+				],
 			};
 
 			const mockCollection = {
-				getList: vi.fn().mockResolvedValue(mockUsers)
+				getList: vi.fn().mockResolvedValue(mockUsers),
 			};
 			mockPb.collection.mockReturnValue(mockCollection);
 
@@ -363,7 +369,7 @@ describe('GradeService', () => {
 
 			expect(mockCollection.getList).toHaveBeenCalledWith(1, 10, {
 				sort: '-stats.gradePoints',
-				filter: 'stats.gradePoints > 0'
+				filter: 'stats.gradePoints > 0',
 			});
 
 			expect(result).toHaveLength(2);
@@ -376,7 +382,7 @@ describe('GradeService', () => {
 	describe('Recent Activities', () => {
 		it('should generate recent activities based on stats', () => {
 			const gradeServiceInstance = gradeService as any;
-			
+
 			const stats: UserStats = {
 				cardsCreated: 5,
 				totalLikes: 20,
@@ -388,7 +394,7 @@ describe('GradeService', () => {
 				featuredCards: 1,
 				monthlyActive: true,
 				joinDate: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(),
-				lastActive: new Date().toISOString()
+				lastActive: new Date().toISOString(),
 			};
 
 			const activities = gradeServiceInstance.getRecentActivities(stats);

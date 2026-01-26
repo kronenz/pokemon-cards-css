@@ -4,16 +4,17 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: vitePreprocess(),
-	
+
 	kit: {
-		// Vercel adapter for production deployment
-		adapter: adapter(),
+		adapter: adapter({
+			runtime: 'nodejs22.x',
+		}),
 
 		// 파일 구조를 정의하는 객체입니다.
 		files: {
-			routes: 'src/routes', 			// 라우트 파일들의 위치를 'src/routes'로 지정합니다.
-			lib: 'src/lib', 			// lib 디렉토리의 위치를 지정합니다.
-			assets: 'src/assets',  // favicon.png 파일의 위치를 지정합니다.
+			routes: 'src/routes', // 라우트 파일들의 위치를 'src/routes'로 지정합니다.
+			lib: 'src/lib', // lib 디렉토리의 위치를 지정합니다.
+			assets: 'src/assets', // favicon.png 파일의 위치를 지정합니다.
 		},
 		// 별칭을 정의하여 import 문을 더 간단하게 만듭니다.
 		alias: {
@@ -26,14 +27,14 @@ const config = {
 		},
 		// 정적 자산 처리를 위한 설정
 		paths: {
-			assets: ''
+			assets: '',
 		},
 		// CSP(Content Security Policy) 설정 (선택사항)
 		csp: {
 			mode: 'auto', //mode: 'auto'는 SvelteKit이 자동으로 적절한 CSP 헤더를 생성하도록 합니다.
 			directives: {
-				'script-src': ['self'] //'script-src': ['self'] 설정은 같은 출처(도메인)에서 제공되는 스크립트만 실행을 허용한다는 의미입니다.
-			}
+				'script-src': ['self'], //'script-src': ['self'] 설정은 같은 출처(도메인)에서 제공되는 스크립트만 실행을 허용한다는 의미입니다.
+			},
 		},
 	},
 
@@ -42,8 +43,8 @@ const config = {
 		onwarn: (warning, defaultHandler) => {
 			console.log('svelte:warnings:%s', JSON.stringify(warning));
 			defaultHandler(warning);
-		}
-	}
+		},
+	},
 };
 
 export default config;

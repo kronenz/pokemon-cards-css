@@ -1,9 +1,9 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { 
-	CardStateManager, 
-	createCardStateManager, 
-	getCardBackImage, 
-	getHolographicColors 
+import {
+	CardStateManager,
+	createCardStateManager,
+	getCardBackImage,
+	getHolographicColors,
 } from '../cardStateManager';
 
 describe('CardStateManager', () => {
@@ -14,7 +14,7 @@ describe('CardStateManager', () => {
 			animationSpeed: 600,
 			enableFlip: true,
 			holographicStyle: 'basic',
-			preventDoubleClick: true
+			preventDoubleClick: true,
 		});
 	});
 
@@ -24,7 +24,7 @@ describe('CardStateManager', () => {
 
 	it('should initialize with default state', () => {
 		const state = stateManager.getState();
-		
+
 		expect(state.isFlipped).toBe(false);
 		expect(state.isHovering).toBe(false);
 		expect(state.isAnimating).toBe(false);
@@ -35,7 +35,7 @@ describe('CardStateManager', () => {
 	it('should handle mouse enter correctly', () => {
 		stateManager.handleMouseEnter();
 		const state = stateManager.getState();
-		
+
 		expect(state.isHovering).toBe(true);
 	});
 
@@ -43,7 +43,7 @@ describe('CardStateManager', () => {
 		stateManager.handleMouseEnter();
 		stateManager.handleMouseLeave();
 		const state = stateManager.getState();
-		
+
 		expect(state.isHovering).toBe(false);
 		expect(state.holographicIntensity).toBe(0);
 		expect(state.mousePosition).toEqual({ x: 0, y: 0 });
@@ -53,7 +53,7 @@ describe('CardStateManager', () => {
 		const mousePos = { x: 100, y: 150 };
 		stateManager.handleMouseMove(mousePos);
 		const state = stateManager.getState();
-		
+
 		expect(state.isHovering).toBe(true);
 		expect(state.mousePosition).toEqual(mousePos);
 	});
@@ -61,9 +61,9 @@ describe('CardStateManager', () => {
 	it('should calculate holographic effect correctly', () => {
 		const mousePos = { x: 100, y: 100 };
 		const cardBounds = { width: 200, height: 300 };
-		
+
 		const effect = stateManager.calculateHolographicEffect(mousePos, cardBounds);
-		
+
 		expect(effect).toHaveProperty('gradientPosition');
 		expect(effect).toHaveProperty('sparklePosition');
 		expect(effect).toHaveProperty('opacity');
@@ -74,7 +74,7 @@ describe('CardStateManager', () => {
 
 	it('should prevent clicks during animation', () => {
 		stateManager.updateState({ isAnimating: true });
-		
+
 		expect(stateManager.canClick()).toBe(false);
 	});
 
@@ -84,20 +84,20 @@ describe('CardStateManager', () => {
 
 	it('should prevent clicks when flip is disabled', () => {
 		stateManager.updateConfig({ enableFlip: false });
-		
+
 		expect(stateManager.canClick()).toBe(false);
 	});
 
 	it('should handle flip animation', async () => {
 		const flipPromise = stateManager.startFlipAnimation();
-		
+
 		// Check that animation state is set initially
 		let state = stateManager.getState();
 		expect(state.isAnimating).toBe(true);
-		
+
 		// Wait for animation to complete
 		await flipPromise;
-		
+
 		// Check final state
 		state = stateManager.getState();
 		expect(state.isFlipped).toBe(true);
@@ -111,12 +111,12 @@ describe('CardStateManager', () => {
 			isHovering: true,
 			isAnimating: true,
 			holographicIntensity: 0.5,
-			mousePosition: { x: 100, y: 100 }
+			mousePosition: { x: 100, y: 100 },
 		});
-		
+
 		// Reset
 		stateManager.reset();
-		
+
 		const state = stateManager.getState();
 		expect(state.isFlipped).toBe(false);
 		expect(state.isHovering).toBe(false);
@@ -134,12 +134,12 @@ describe('Utility Functions', () => {
 
 	it('should get correct card back image for KBO team', () => {
 		const backImage = getCardBackImage('kbo', 'LG');
-		expect(backImage).toBe('/images/kbo/lg-back.webp');
+		expect(backImage).toBe('https://assets.codepen.io/13471/pokemon-card-back.webp');
 	});
 
 	it('should get default KBO back image for unknown team', () => {
 		const backImage = getCardBackImage('kbo', 'UNKNOWN');
-		expect(backImage).toBe('/images/kbo/default-back.webp');
+		expect(backImage).toBe('https://assets.codepen.io/13471/pokemon-card-back.webp');
 	});
 
 	it('should get correct holographic colors', () => {
@@ -147,7 +147,7 @@ describe('Utility Functions', () => {
 		expect(colors).toEqual({
 			color1: '#667eea',
 			color2: '#764ba2',
-			intensity: 1.2
+			intensity: 1.2,
 		});
 	});
 
@@ -156,7 +156,7 @@ describe('Utility Functions', () => {
 		expect(colors).toEqual({
 			color1: '#00e7ff',
 			color2: '#ff00e7',
-			intensity: 1.0
+			intensity: 1.0,
 		});
 	});
 });

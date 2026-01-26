@@ -1,5 +1,10 @@
 {
   "permissionMode": "bypassPermissions",
   "autoApprove": true,
-  "skipConfirmations": true
+  "skipConfirmations": true,
+  "permissions": {
+    "allow": [
+      "Bash(curl:*)"
+    ]
+  }
 }

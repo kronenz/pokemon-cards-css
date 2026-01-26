@@ -2,10 +2,20 @@
 	import { goto } from '$app/navigation';
 	import { browser } from '$app/environment';
 	import UnifiedCard from '$lib/components/v2/UnifiedCard.svelte';
-	import { supabaseAuthService } from '$lib/services/supabaseAuthService';
+	import { authService } from '$lib/services/authService';
 	import { scrollFadeUp, scrollFadeLeft, scrollScale } from '$lib/transitions/scroll-animations';
 
-	type TeamId = 'lg' | 'doosan' | 'kt' | 'samsung' | 'nc' | 'kia' | 'lotte' | 'ssg' | 'hanwha' | 'kiwoom';
+	type TeamId =
+		| 'lg'
+		| 'doosan'
+		| 'kt'
+		| 'samsung'
+		| 'nc'
+		| 'kia'
+		| 'lotte'
+		| 'ssg'
+		| 'hanwha'
+		| 'kiwoom';
 
 	// Step management
 	let currentStep = 1;
@@ -43,7 +53,7 @@
 		{ id: 'lotte', name: '롯데 자이언츠', color: '#041E42' },
 		{ id: 'ssg', name: 'SSG 랜더스', color: '#CE0E2D' },
 		{ id: 'hanwha', name: '한화 이글스', color: '#FF6600' },
-		{ id: 'kiwoom', name: '키움 히어로즈', color: '#570514' }
+		{ id: 'kiwoom', name: '키움 히어로즈', color: '#570514' },
 	];
 
 	// Password strength calculation
@@ -137,64 +147,64 @@
 
 		error = '';
 		loading = true;
-		console.log('[Register] Starting handleSubmit, loading:', loading);
 
 		try {
-			// Step 1: Create Supabase auth user
-			console.log('[Register] Starting signup with email:', email);
-			const user = await supabaseAuthService.signUpWithEmail(email, password, name);
-			console.log('[Register] Signup result:', user);
+			const user = await authService.signUpWithEmail(email, password, name);
 
 			if (!user) {
-				// Get detailed error from service
 				let errorMsg = '회원가입에 실패했습니다.';
-				supabaseAuthService.error.subscribe(err => {
+				authService.error.subscribe((err) => {
 					if (err) {
-						console.error('[Register] Signup error details:', err);
 						errorMsg = err.message || errorMsg;
 					}
 				})();
 				throw new Error(errorMsg);
 			}
 
-			// Step 2: Update profile with additional data (optional, don't fail signup if this fails)
+			// Update profile with optional data
 			if (favoriteTeam || bio) {
-				console.log('[Register] Updating profile with additional data');
 				try {
-					// Wait a bit more for the profile to be fully created
-					await new Promise(resolve => setTimeout(resolve, 1000));
-
-					await supabaseAuthService.updateProfile({
+					await new Promise((resolve) => setTimeout(resolve, 500));
+					const selectedTeam = teams.find((t) => t.id === favoriteTeam);
+					await authService.updateProfile({
 						bio: bio || undefined,
-						favorite_team: favoriteTeam || undefined
+						favoriteTeam: selectedTeam
+							? {
+									id: selectedTeam.id,
+									name: selectedTeam.name,
+									englishName: selectedTeam.name,
+									city: '',
+									stadium: '',
+									founded: 0,
+									colors: { primary: selectedTeam.color, secondary: selectedTeam.color },
+									mascot: '',
+									fanClubName: '',
+									cheers: [],
+									achievements: { championships: 0 },
+								}
+							: undefined,
 					});
-					console.log('[Register] Profile updated successfully');
 				} catch (updateError: any) {
-					console.error('[Register] Failed to update profile, but signup succeeded:', updateError);
-					// Don't fail the signup even if profile update fails
+					console.error('Failed to update profile:', updateError);
 				}
 			}
 
-			console.log('[Register] Signup successful, redirecting to home');
 			goto('/');
 		} catch (err: any) {
-			console.error('[Register] Signup error:', err);
+			console.error('Signup error:', err);
 			error = err.message || '회원가입에 실패했습니다.';
 			currentStep = 1;
 		} finally {
-			console.log('[Register] Finally block - setting loading to false');
 			loading = false;
-			console.log('[Register] Loading state after finally:', loading);
 		}
 	}
 
-	async function handleOAuth(provider: 'google' | 'kakao' | 'naver') {
+	async function handleOAuth(provider: 'google' | 'github') {
 		error = '';
 		loading = true;
 
 		try {
-			await supabaseAuthService.signInWithOAuth(provider);
-			// OAuth는 리다이렉트되므로 loading은 계속 유지
+			await authService.signInWithOAuth(provider);
 		} catch (err: any) {
 			error = `${provider} 회원가입에 실패했습니다.`;
 			loading = false;
@@ -207,7 +217,9 @@
 	<div class="card-showcase">
 		<div class="showcase-content">
 			<h1 class="brand-title" use:scrollFadeUp={{ duration: 700 }}>홀로그래픽 카드 플랫폼</h1>
-			<p class="brand-subtitle" use:scrollFadeUp={{ duration: 600, delay: 100 }}>지금 바로 시작하세요</p>
+			<p class="brand-subtitle" use:scrollFadeUp={{ duration: 600, delay: 100 }}>
+				지금 바로 시작하세요
+			</p>
 
 			<div class="demo-card" use:scrollScale={{ duration: 800, delay: 200 }}>
 				<UnifiedCard
@@ -274,28 +286,18 @@
 
 						<button
 							type="button"
-							class="oauth-button kakao"
-							on:click={() => handleOAuth('kakao')}
+							class="oauth-button github"
+							on:click={() => handleOAuth('github')}
 							disabled={loading}
 						>
 							<svg class="oauth-icon" viewBox="0 0 24 24" fill="currentColor">
 								<path
-									d="M12 3c-5.799 0-10.5 3.664-10.5 8.185 0 2.868 1.912 5.389 4.785 6.825-.203.746-.765 2.814-.88 3.24-.14.525.192.518.403.376.174-.117 2.808-1.904 3.877-2.629.766.107 1.55.162 2.315.162 5.799 0 10.5-3.664 10.5-8.185S17.799 3 12 3z"
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
 								/>
 							</svg>
-							<span>Kakao로 빠른 가입</span>
-						</button>
-
-						<button
-							type="button"
-							class="oauth-button naver"
-							on:click={() => handleOAuth('naver')}
-							disabled={loading}
-						>
-							<svg class="oauth-icon" viewBox="0 0 24 24" fill="currentColor">
-								<path d="M16.273 12.845L7.376 0H0v24h7.726V11.156L16.624 24H24V0h-7.727v12.845z" />
-							</svg>
-							<span>Naver로 빠른 가입</span>
+							<span>GitHub로 빠른 가입</span>
 						</button>
 					</div>
 
@@ -351,7 +353,11 @@
 										></div>
 									</div>
 									<span class="strength-label">
-										{passwordStrength === 'weak' ? '약함' : passwordStrength === 'medium' ? '보통' : '강함'}
+										{passwordStrength === 'weak'
+											? '약함'
+											: passwordStrength === 'medium'
+												? '보통'
+												: '강함'}
 									</span>
 								</div>
 							{/if}
@@ -477,7 +483,8 @@
 								class="terms-checkbox"
 							/>
 							<span class="terms-text">
-								<a href="/privacy" target="_blank" class="terms-link">개인정보처리방침</a>에 동의합니다
+								<a href="/privacy" target="_blank" class="terms-link">개인정보처리방침</a>에
+								동의합니다
 								<span class="required-badge">필수</span>
 							</span>
 						</label>

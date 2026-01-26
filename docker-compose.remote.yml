@@ -1,0 +1,84 @@
+version: '3.8'
+
+# Remote Deployment Configuration for photo-cards
+# Target: dron1999@10.254.0.96
+# Uses different ports to avoid conflict with existing services
+
+services:
+  pocketbase:
+    build:
+      context: .
+      dockerfile: Dockerfile.pocketbase
+    container_name: photo-cards-pocketbase-remote
+    restart: unless-stopped
+    command: >
+      pocketbase serve --dir=/pb_data --http=0.0.0.0:8090 --publicDir=/pb_public
+    ports:
+      - '18090:8090' # External 18090 -> Internal 8090
+    volumes:
+      - ./pocketbase/pb_data:/pb_data
+      - ./pocketbase/pb_public:/pb_public
+      - ./pocketbase/migrations:/pb_migrations
+    environment:
+      - POCKETBASE_ENCRYPTION_KEY=${POCKETBASE_ENCRYPTION_KEY:-photo-cards-32char-key-change-it}
+    networks:
+      - photo-cards-remote-network
+    healthcheck:
+      test:
+        ['CMD', 'wget', '--no-verbose', '--tries=1', '--spider', 'http://localhost:8090/api/health']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # MinIO Object Storage (for file uploads)
+  minio:
+    image: minio/minio:latest
+    container_name: photo-cards-minio-remote
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    ports:
+      - '19000:9000' # API: External 19000 -> Internal 9000
+      - '19001:9001' # Console: External 19001 -> Internal 9001
+    volumes:
+      - photo_cards_minio_data:/data
+    environment:
+      - MINIO_ROOT_USER=${MINIO_ROOT_USER:-photocards}
+      - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD:-photocards123}
+      - MINIO_DOMAIN=10.254.0.96
+      - MINIO_SERVER_URL=http://10.254.0.96:19000
+    networks:
+      - photo-cards-remote-network
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost:9000/minio/health/live']
+      interval: 30s
+      timeout: 20s
+      retries: 3
+
+  # Redis (caching and sessions)
+  redis:
+    image: redis:7-alpine
+    container_name: photo-cards-redis-remote
+    restart: unless-stopped
+    ports:
+      - '16379:6379' # External 16379 -> Internal 6379
+    volumes:
+      - photo_cards_redis_data:/data
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-photocards123}
+    networks:
+      - photo-cards-remote-network
+    healthcheck:
+      test: ['CMD', 'redis-cli', '-a', '${REDIS_PASSWORD:-photocards123}', 'ping']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  photo_cards_minio_data:
+    driver: local
+  photo_cards_redis_data:
+    driver: local
+
+networks:
+  photo-cards-remote-network:
+    driver: bridge
